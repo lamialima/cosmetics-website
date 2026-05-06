@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bag — LUMIÈRE Beauty</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-banner text-center py-2">
+        <small><i class="fas fa-truck me-2"></i>FREE SHIPPING ON ORDERS OVER $75</small>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand fw-bold fs-4" href="index.html"><span class="brand-icon">✦</span> LUMIÈRE</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cart.html">
+                            <i class="fas fa-shopping-bag me-1"></i>Bag
+                            <span class="badge bg-light text-dark ms-1" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Shopping Bag</li>
+                </ol>
+            </nav>
+            <h1 class="page-title">Your Beauty Bag</h1>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div id="cartContent">
+                <div class="row g-5">
+                    <div class="col-lg-8">
+                        <div id="cartItems"></div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cart-summary">
+                            <h5 class="fw-bold mb-4">Order Summary</h5>
+                            <div class="summary-row d-flex justify-content-between mb-2">
+                                <span class="text-muted">Subtotal</span>
+                                <span id="cartSubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row d-flex justify-content-between mb-2">
+                                <span class="text-muted">Shipping</span>
+                                <span id="cartShipping">Free</span>
+                            </div>
+                            <div class="summary-row d-flex justify-content-between mb-4">
+                                <span class="text-muted">Tax (8%)</span>
+                                <span id="cartTax">$0.00</span>
+                            </div>
+
+                            <!-- Promo Code -->
+                            <div class="promo-wrap mb-4">
+                                <div class="d-flex gap-2">
+                                    <input type="text" class="form-control" placeholder="Promo code" id="promoCode">
+                                    <button class="btn btn-outline-accent" onclick="applyPromo()">Apply</button>
+                                </div>
+                                <div id="promoMsg" class="mt-2 small"></div>
+                            </div>
+
+                            <hr class="border-secondary">
+                            <div class="summary-row d-flex justify-content-between mb-4 mt-3">
+                                <span class="fw-bold">Total</span>
+                                <span class="fw-bold fs-5 accent-text" id="cartTotal">$0.00</span>
+                            </div>
+
+                            <a href="checkout.html" class="btn btn-hero-primary w-100 py-3 mb-3">
+                                <i class="fas fa-lock me-2"></i>Secure Checkout
+                            </a>
+                            <a href="shop.html" class="btn btn-outline-accent w-100">Continue Shopping</a>
+
+                            <div class="trust-strip mt-4">
+                                <div class="trust-item"><i class="fas fa-shield-alt"></i> SSL Secured</div>
+                                <div class="trust-item"><i class="fas fa-undo"></i> Free Returns</div>
+                                <div class="trust-item"><i class="fas fa-truck"></i> Fast Delivery</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Cart -->
+            <div id="emptyCart" class="text-center py-5 d-none">
+                <div class="empty-cart-icon mb-4">
+                    <i class="fas fa-shopping-bag fa-4x" style="color:var(--accent-light)"></i>
+                </div>
+                <h3>Your bag is empty</h3>
+                <p class="text-muted mb-4">Discover our luxurious beauty collection</p>
+                <a href="shop.html" class="btn btn-hero-primary px-5">Start Shopping</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Products -->
+    <section class="recommended-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="section-header mb-5 text-center">
+                <span class="section-tag">You May Also Love</span>
+                <h2 class="section-title">Recommended for You</h2>
+            </div>
+            <div class="row g-4" id="recommendedProducts"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-brand mb-3">✦ LUMIÈRE</h6>
+                    <p class="small text-muted mb-4" style="max-width: 320px;">Experience the pinnacle of luxury beauty. Our formulas bridge the gap between ancient botanical wisdom and modern dermatological science.</p>
+                    <div class="social-icons d-flex gap-3">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h6 class="footer-title">Shop</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="shop.html" class="footer-link">All Products</a></li>
+                        <li><a href="shop.html?category=skincare" class="footer-link">Skincare</a></li>
+                        <li><a href="shop.html?category=makeup" class="footer-link">Makeup</a></li>
+                        <li><a href="shop.html?category=fragrance" class="footer-link">Fragrance</a></li>
+                        <li><a href="shop.html?category=haircare" class="footer-link">Hair Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h6 class="footer-title">Support</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Shipping Policy</a></li>
+                        <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+                        <li><a href="#" class="footer-link">Order Tracking</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h6 class="footer-title">Contact & Security</h6>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1001 Luxury Blvd, Suite 500<br>New York, NY 10001, USA</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>concierge@lumierebeauty.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (888) LUMIERE</span>
+                    </div>
+                    
+                    <div class="payment-badges d-flex gap-2 mt-4 flex-wrap">
+                        <span class="pay-badge" title="bKash">bKash</span>
+                        <span class="pay-badge" title="Nagad">Nagad</span>
+                        <span class="pay-badge" title="Cash on Delivery">CashOn</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small text-muted mb-0">&copy; 2026 LUMIÈRE Beauty. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <div class="trust-badges d-inline-flex gap-2">
+                        <div class="trust-badge"><i class="fas fa-shield-alt"></i><span>SSL Secure</span></div>
+                        <div class="trust-badge"><i class="fas fa-leaf"></i><span>100% Vegan</span></div>
+                        <div class="trust-badge"><i class="fas fa-paw"></i><span>Cruelty Free</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        let discount = 0;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCart();
+            loadRecommended();
+        });
+
+        function renderCart() {
+            const cart = getCart();
+            const cartContent = document.getElementById('cartContent');
+            const emptyCart = document.getElementById('emptyCart');
+            const cartItems = document.getElementById('cartItems');
+
+            if (cart.length === 0) {
+                cartContent.style.display = 'none';
+                emptyCart.classList.remove('d-none');
+                return;
+            }
+
+            cartContent.style.display = '';
+            emptyCart.classList.add('d-none');
+
+            cartItems.innerHTML = cart.map(item => {
+                const product = window.products.find(p => p.id === item.id);
+                return `
+                <div class="cart-item mb-3" id="cartItem-${item.id}">
+                    <div class="row align-items-center g-3">
+                        <div class="col-3 col-md-2">
+                            <div class="cart-item-img-wrap">
+                                <img src="${product?.image || ''}" alt="${item.name}" class="cart-item-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="cart-img-fallback" style="display:none; background: linear-gradient(135deg, ${item.color1}, ${item.color2});"></div>
+                            </div>
+                        </div>
+                        <div class="col-9 col-md-5">
+                            <span class="product-cat" style="font-size:0.75rem">${product?.categoryLabel || ''}</span>
+                            <h6 class="fw-bold mb-1">${item.name}</h6>
+                            <small class="text-muted">${product?.size || '30ml'}</small>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="qty-control d-flex align-items-center gap-2">
+                                <button class="qty-btn" onclick="updateQty(${item.id}, -1)"><i class="fas fa-minus"></i></button>
+                                <span class="qty-value">${item.quantity}</span>
+                                <button class="qty-btn" onclick="updateQty(${item.id}, 1)"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-5 col-md-1 text-end">
+                            <span class="product-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                        </div>
+                        <div class="col-1 text-end">
+                            <button class="remove-btn" onclick="removeFromCart(${item.id})"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            updateSummary(cart);
+        }
+
+        function updateSummary(cart) {
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const shipping = subtotal >= 75 ? 0 : 9.99;
+            const tax = (subtotal - discount) * 0.08;
+            const total = subtotal - discount + shipping + tax;
+
+            document.getElementById('cartSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('cartShipping').textContent = shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`;
+            document.getElementById('cartTax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('cartTotal').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function updateQty(id, change) {
+            let cart = getCart();
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) cart = cart.filter(i => i.id !== id);
+                saveCart(cart);
+                renderCart();
+                updateCartCount();
+            }
+        }
+
+        function removeFromCart(id) {
+            let cart = getCart().filter(i => i.id !== id);
+            saveCart(cart);
+            renderCart();
+            updateCartCount();
+            showNotification('Item removed from bag');
+        }
+
+        function applyPromo() {
+            const code = document.getElementById('promoCode').value.toUpperCase();
+            const msg = document.getElementById('promoMsg');
+            if (code === 'LUMIERE10') {
+                const cart = getCart();
+                const subtotal = cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
+                discount = subtotal * 0.1;
+                msg.innerHTML = '<span style="color:var(--accent-light)">✓ 10% discount applied!</span>';
+                updateSummary(cart);
+            } else if (code === 'BEAUTY20') {
+                const cart = getCart();
+                const subtotal = cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
+                discount = subtotal * 0.2;
+                msg.innerHTML = '<span style="color:var(--accent-light)">✓ 20% discount applied!</span>';
+                updateSummary(cart);
+            } else {
+                msg.innerHTML = '<span style="color:#ff6b6b">✗ Invalid promo code.</span>';
+            }
+        }
+
+        function loadRecommended() {
+            const container = document.getElementById('recommendedProducts');
+            const recommended = window.products.slice(0, 4);
+            container.innerHTML = recommended.map(product => `
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card" onclick="window.location='shop.html'">
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="product-img-fallback" style="display:none; background: linear-gradient(135deg, ${product.color1}, ${product.color2});"></div>
+                            <span class="product-badge">${product.badge}</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">${product.name}</h5>
+                            <div class="product-footer d-flex justify-content-between align-items-center mt-2">
+                                <span class="product-price">$${product.price.toFixed(2)}</span>
+                                <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart(${product.id})"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`).join('');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — LUMIÈRE Beauty</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand fw-bold fs-4" href="index.html"><span class="brand-icon">✦</span> LUMIÈRE</a>
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <i class="fas fa-lock me-1" style="color:var(--accent-light)"></i>
+                <small style="color:var(--text-secondary)">Secure Checkout</small>
+            </div>
+        </div>
+    </nav>
+
+    <section class="checkout-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <!-- Progress Bar -->
+            <div class="checkout-progress mb-5">
+                <div class="progress-step active"><span>1</span> Information</div>
+                <div class="progress-line"></div>
+                <div class="progress-step"><span>2</span> Shipping</div>
+                <div class="progress-line"></div>
+                <div class="progress-step"><span>3</span> Payment</div>
+            </div>
+
+            <div class="row g-5">
+                <!-- Checkout Form -->
+                <div class="col-lg-7">
+                    <div class="checkout-form">
+                        <!-- Contact Info -->
+                        <div class="checkout-step mb-4">
+                            <h5 class="step-title mb-4"><span class="step-number">1</span> Contact Information</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="Jane">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="Doe">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg" placeholder="jane@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-lg" placeholder="+1 (555) 000-0000">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="checkout-step mb-4">
+                            <h5 class="step-title mb-4"><span class="step-number">2</span> Shipping Address</h5>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="form-label">Street Address</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="123 Beauty Lane">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Apt, Suite, Unit (optional)</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="Apt 4B">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">City</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="New York">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">State</label>
+                                    <select class="form-select form-select-lg">
+                                        <option>NY</option><option>CA</option><option>TX</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">ZIP Code</label>
+                                    <input type="text" class="form-control form-control-lg" placeholder="10001">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Method -->
+                        <div class="checkout-step mb-4">
+                            <h5 class="step-title mb-4"><span class="step-number">3</span> Delivery Method</h5>
+                            <div class="shipping-options">
+                                <label class="shipping-option d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <input type="radio" name="shipping" value="standard" checked>
+                                        <div>
+                                            <strong>Standard Delivery</strong>
+                                            <p class="mb-0 text-muted small">5–7 Business Days</p>
+                                        </div>
+                                    </div>
+                                    <span class="shipping-price">FREE</span>
+                                </label>
+                                <label class="shipping-option d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <input type="radio" name="shipping" value="express">
+                                        <div>
+                                            <strong>Express Delivery</strong>
+                                            <p class="mb-0 text-muted small">2–3 Business Days</p>
+                                        </div>
+                                    </div>
+                                    <span class="shipping-price">$9.99</span>
+                                </label>
+                                <label class="shipping-option d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <input type="radio" name="shipping" value="overnight">
+                                        <div>
+                                            <strong>Overnight Delivery</strong>
+                                            <p class="mb-0 text-muted small">Next Business Day</p>
+                                        </div>
+                                    </div>
+                                    <span class="shipping-price">$24.99</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="checkout-step">
+                            <h5 class="step-title mb-4"><span class="step-number">4</span> Payment</h5>
+                            <div class="payment-methods d-flex gap-3 mb-4 flex-wrap">
+                                <label class="payment-method-btn active-method" onclick="togglePaymentFields('bkash')">
+                                    <input type="radio" name="payment" value="bkash" checked hidden>
+                                    <span class="fw-bold">bKash</span>
+                                </label>
+                                <label class="payment-method-btn" onclick="togglePaymentFields('nagad')">
+                                    <input type="radio" name="payment" value="nagad" hidden>
+                                    <span class="fw-bold">Nagad</span>
+                                </label>
+                                <label class="payment-method-btn" onclick="togglePaymentFields('cod')">
+                                    <input type="radio" name="payment" value="cod" hidden>
+                                    <i class="fas fa-truck me-2"></i>Cash on Delivery
+                                </label>
+                            </div>
+
+                            <!-- Mobile Banking / COD Info -->
+                            <div id="mfs-info" class="mt-4 p-3 bg-darker border border-secondary">
+                                <div id="bkash-msg">
+                                    <p class="small mb-0"><i class="fas fa-info-circle me-2 text-accent-light"></i>You will be redirected to the bKash payment gateway to complete your transaction.</p>
+                                </div>
+                                <div id="nagad-msg" class="d-none">
+                                    <p class="small mb-0"><i class="fas fa-info-circle me-2 text-accent-light"></i>You will be redirected to the Nagad payment gateway to complete your transaction.</p>
+                                </div>
+                                <div id="cod-msg" class="d-none">
+                                    <p class="small mb-0"><i class="fas fa-info-circle me-2 text-accent-light"></i>Pay with cash upon delivery of your order.</p>
+                                </div>
+                            </div>
+
+                            <div class="security-info mt-4 d-flex align-items-center gap-2">
+                                <i class="fas fa-lock" style="color:var(--accent-light)"></i>
+                                <small class="text-muted">Your payment is processed securely with 256-bit encryption.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-5">
+                    <div class="order-summary-sticky">
+                        <h5 class="fw-bold mb-4">Order Summary</h5>
+                        <div id="checkoutItems" class="mb-4"></div>
+                        <hr class="border-secondary">
+                        <div class="summary-item d-flex justify-content-between mb-2 mt-3">
+                            <span class="text-muted">Subtotal</span>
+                            <span id="checkoutSubtotal">$0.00</span>
+                        </div>
+                        <div class="summary-item d-flex justify-content-between mb-2">
+                            <span class="text-muted">Shipping</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="summary-item d-flex justify-content-between mb-4">
+                            <span class="text-muted">Tax</span>
+                            <span id="checkoutTax">$0.00</span>
+                        </div>
+                        <hr class="border-secondary">
+                        <div class="summary-item d-flex justify-content-between mb-4 mt-3">
+                            <strong>Total</strong>
+                            <strong class="accent-text fs-5" id="checkoutTotal">$0.00</strong>
+                        </div>
+                        <button class="btn btn-hero-primary w-100 py-3" onclick="placeOrder()">
+                            <i class="fas fa-lock me-2"></i>Place Order
+                        </button>
+                        <div class="d-flex justify-content-center gap-4 mt-4 text-muted small">
+                            <span><i class="fas fa-shield-alt me-1"></i>Secure</span>
+                            <span><i class="fas fa-undo me-1"></i>30-day Returns</span>
+                            <span><i class="fas fa-headset me-1"></i>Support</span>
+                        </div>
+                        <!-- Gift Options -->
+                        <div class="gift-option mt-4 p-3">
+                            <label class="d-flex align-items-center gap-2">
+                                <input type="checkbox" id="giftWrap">
+                                <span><i class="fas fa-gift me-2" style="color:var(--accent-light)"></i>Add gift wrapping (+$5.00)</span>
+                            </label>
+                            <div id="giftMsgBox" class="mt-2 d-none">
+                                <textarea class="form-control" rows="2" placeholder="Your gift message..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCheckoutSummary();
+
+            document.getElementById('giftWrap').addEventListener('change', function() {
+                document.getElementById('giftMsgBox').classList.toggle('d-none', !this.checked);
+            });
+
+            document.querySelectorAll('.payment-method-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.payment-method-btn').forEach(b => b.classList.remove('active-method'));
+                    this.classList.add('active-method');
+                });
+            });
+        });
+
+        function togglePaymentFields(type) {
+            document.getElementById('bkash-msg').classList.toggle('d-none', type !== 'bkash');
+            document.getElementById('nagad-msg').classList.toggle('d-none', type !== 'nagad');
+            document.getElementById('cod-msg').classList.toggle('d-none', type !== 'cod');
+        }
+
+        function loadCheckoutSummary() {
+            const cart = getCart();
+            const container = document.getElementById('checkoutItems');
+            const subtotal = cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center">Your bag is empty.</p>';
+                return;
+            }
+
+            container.innerHTML = cart.map(item => {
+                const product = window.products.find(p => p.id === item.id);
+                return `
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="checkout-thumb" style="background: linear-gradient(135deg, ${item.color1}, ${item.color2}); min-width:50px; height:50px; border-radius:4px; overflow:hidden;">
+                        <img src="${product?.image || ''}" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+                    </div>
+                    <div class="flex-grow-1">
+                        <strong style="font-size:0.9rem">${item.name}</strong>
+                        <p class="mb-0 text-muted small">Qty: ${item.quantity}</p>
+                    </div>
+                    <span class="product-price">$${(item.price * item.quantity).toFixed(2)}</span>
+                </div>`;
+            }).join('');
+
+            document.getElementById('checkoutSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('checkoutTax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('checkoutTotal').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function placeOrder() {
+            showNotification('🎉 Order placed! Thank you for shopping with LUMIÈRE!');
+            localStorage.removeItem('lumiereCart');
+            setTimeout(() => { window.location.href = 'index.html'; }, 3000);
+        }
+    </script>
+</body>
+</html>

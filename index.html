@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIÈRE — Luxury Cosmetics & Beauty</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner text-center py-2">
+        <small><i class="fas fa-truck me-2"></i>FREE SHIPPING ON ORDERS OVER $75 &nbsp;|&nbsp; <i class="fas fa-gift me-2"></i>COMPLIMENTARY SAMPLES WITH EVERY ORDER</small>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                <span class="brand-icon">✦</span> LUMIÈRE
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#wishlistDrawer">
+                            <i class="fas fa-heart me-1"></i>Favorites
+                            <span class="badge bg-light text-dark ms-1" id="wishlistCount">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer">
+                            <i class="fas fa-shopping-bag me-1"></i>Bag
+                            <span class="badge bg-light text-dark ms-1" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-tagline">New Collection 2026</span>
+            <h1 class="hero-title">Reveal Your<br><em>Luminous</em> Self</h1>
+            <p class="hero-subtitle">Luxury cosmetics crafted with rare botanicals and cutting-edge science. Beauty that transcends the ordinary.</p>
+            <div class="hero-buttons d-flex gap-3 mt-4">
+                <a href="shop.html" class="btn btn-hero-primary">Shop Now</a>
+                <a href="#categories" class="btn btn-hero-outline">Explore</a>
+            </div>
+            <div class="hero-stats d-flex gap-5 mt-5">
+                <div class="stat">
+                    <span class="stat-num">250+</span>
+                    <span class="stat-label">Products</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">98%</span>
+                    <span class="stat-label">Natural</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">50K+</span>
+                    <span class="stat-label">Customers</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-wrap">
+            <div class="hero-img-badge">BESTSELLER</div>
+            <img src="images/hero_main.jpg" alt="Luxury Cosmetics" class="hero-main-img">
+           
+        </div>
+    </section>
+
+    <!-- Brands Strip -->
+    <section class="brands-strip py-4">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="d-flex align-items-center justify-content-center gap-5 flex-wrap">
+                <span class="brand-pill"><i class="fas fa-leaf me-2"></i>Vegan</span>
+                <span class="brand-pill"><i class="fas fa-ban me-2"></i>Cruelty Free</span>
+                <span class="brand-pill"><i class="fas fa-seedling me-2"></i>Sustainable</span>
+                <span class="brand-pill"><i class="fas fa-certificate me-2"></i>Dermatologist Tested</span>
+                <span class="brand-pill"><i class="fas fa-recycle me-2"></i>Eco Packaging</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories-section py-5" id="categories">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="section-header mb-5">
+                <span class="section-tag">Curated for You</span>
+                <h2 class="section-title">Shop by Category</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <a href="shop.html?category=skincare" class="category-card-link">
+                        <div class="category-card">
+                            <div class="category-img-wrap">
+                                <img src="images/cat_skincare.jpg" alt="Skincare" class="category-img">
+                            </div>
+                            <div class="category-body">
+                                <h5 class="category-name">Skincare</h5>
+                                <p class="category-count">48 Products</p>
+                                <span class="category-link">Browse →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="shop.html?category=makeup" class="category-card-link">
+                        <div class="category-card">
+                            <div class="category-img-wrap">
+                                <img src="images/cat_makeup.jpg" alt="Makeup" class="category-img">
+                            </div>
+                            <div class="category-body">
+                                <h5 class="category-name">Makeup</h5>
+                                <p class="category-count">62 Products</p>
+                                <span class="category-link">Browse →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="shop.html?category=fragrance" class="category-card-link">
+                        <div class="category-card">
+                            <div class="category-img-wrap">
+                                <img src="images/cat_fragrance.jpg" alt="Fragrance" class="category-img">
+                            </div>
+                            <div class="category-body">
+                                <h5 class="category-name">Fragrance</h5>
+                                <p class="category-count">24 Products</p>
+                                <span class="category-link">Browse →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="shop.html?category=haircare" class="category-card-link">
+                        <div class="category-card">
+                            <div class="category-img-wrap">
+                                <img src="images/cat_haircare.jpg" alt="Hair Care" class="category-img">
+                            </div>
+                            <div class="category-body">
+                                <h5 class="category-name">Hair Care</h5>
+                                <p class="category-count">35 Products</p>
+                                <span class="category-link">Browse →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="section-header d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <span class="section-tag">Hand-Picked</span>
+                    <h2 class="section-title">Featured Collection</h2>
+                </div>
+                <a href="shop.html" class="btn btn-outline-accent">View All <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            <div class="row g-4" id="featuredProducts"></div>
+        </div>
+    </section>
+
+    <!-- Banner Split Section -->
+    <section class="split-banner py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="banner-card banner-card-1">
+                        <div class="banner-content">
+                            <span class="banner-tag">Limited Edition</span>
+                            <h3>Rose Gold<br>Ritual Kit</h3>
+                            <p>Experience the ultimate luxury skincare ritual</p>
+                            <a href="shop.html" class="btn btn-sm btn-light-accent">Shop Kit</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner-card banner-card-2">
+                        <div class="banner-content">
+                            <span class="banner-tag">New Launch</span>
+                            <h3>Velvet Matte<br>Lip Collection</h3>
+                            <p>18 shades. One perfect finish.</p>
+                            <a href="shop.html" class="btn btn-sm btn-light-accent">Discover</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers -->
+    <section class="bestsellers-section py-5" id="about">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="section-header mb-5 text-center">
+                <span class="section-tag">Top Picks</span>
+                <h2 class="section-title">Bestsellers</h2>
+            </div>
+            <div class="row g-4" id="bestsellersProducts"></div>
+        </div>
+    </section>
+
+    <!-- About / Brand Story -->
+    <section class="about-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-images-grid">
+                        <img src="images/about_main.jpg" alt="Lab" class="about-img-main">
+                        <img src="images/about_sm.jpg" alt="Products" class="about-img-sm">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title mt-2">Beauty Rooted<br>in <em>Science & Nature</em></h2>
+                    <p class="mt-4 about-desc">Born from a passion for pure beauty, LUMIÈRE blends the finest natural botanicals with breakthrough skincare science. Every formula is developed by expert dermatologists and tested for maximum efficacy and skin safety.</p>
+                    <p class="about-desc">We believe luxury beauty should never compromise your skin—or the planet. That's why all our products are vegan, cruelty-free, and housed in sustainable packaging.</p>
+                    <div class="about-features d-flex gap-4 mt-4 flex-wrap">
+                        <div class="about-feat"><i class="fas fa-flask"></i><span>Science-Backed</span></div>
+                        <div class="about-feat"><i class="fas fa-leaf"></i><span>Natural Ingredients</span></div>
+                        <div class="about-feat"><i class="fas fa-award"></i><span>Award-Winning</span></div>
+                    </div>
+                    <a href="shop.html" class="btn btn-hero-primary mt-4">Explore All Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="section-header mb-5 text-center">
+                <span class="section-tag">Reviews</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"The Rose Glow Serum completely transformed my skin in just 2 weeks. I've never felt more confident without makeup!"</p>
+                        <div class="testimonial-author d-flex align-items-center gap-3 mt-4">
+                            <img src="images/user_sarah.jpg" alt="Sarah" class="author-img">
+                            <div><strong>Sarah Mitchell</strong><br><small>Verified Buyer</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card featured-testimonial">
+                        <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"LUMIÈRE's Velvet Matte lipstick lasts all day without drying out my lips. The shade range is absolutely stunning!"</p>
+                        <div class="testimonial-author d-flex align-items-center gap-3 mt-4">
+                            <img src="images/user_anika.jpg" alt="Anika" class="author-img">
+                            <div><strong>Anika Patel</strong><br><small>Verified Buyer</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Finally a perfume that lasts. The Midnight Bloom eau de parfum has become my signature scent — I get compliments daily."</p>
+                        <div class="testimonial-author d-flex align-items-center gap-3 mt-4">
+                            <img src="images/user_chloe.jpg" alt="Chloe" class="author-img">
+                            <div><strong>Chloe Laurent</strong><br><small>Verified Buyer</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="insta-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="text-center mb-4">
+                <span class="section-tag">Follow Us</span>
+                <h2 class="section-title">@lumiere.beauty</h2>
+            </div>
+            <div class="insta-grid">
+                <div class="insta-item"><img src="images/insta_1.jpg" alt="insta"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="images/insta_2.jpg" alt="insta"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="images/insta_3.jpg" alt="insta"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="images/insta_4.jpg" alt="insta"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="images/insta_5.jpg" alt="insta"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="images/insta_6.jpg" alt="insta"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <span class="section-tag">Stay Updated</span>
+                    <h3 class="section-title mt-2 mb-3">Join the LUMIÈRE Club</h3>
+                    <p class="text-muted mb-4">Subscribe for exclusive offers, new arrivals & beauty tips from our experts</p>
+                    <form class="newsletter-form d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-newsletter">Subscribe</button>
+                    </form>
+                    <small class="text-muted mt-2 d-block">We respect your privacy. Unsubscribe anytime.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div id="productDetailsContent">
+                        <!-- Content loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-brand mb-3">✦ LUMIÈRE</h6>
+                    <p class="small text-muted mb-4" style="max-width: 320px;">Experience the pinnacle of luxury beauty. Our formulas bridge the gap between ancient botanical wisdom and modern dermatological science.</p>
+                    <div class="social-icons d-flex gap-3">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h6 class="footer-title">Shop</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="shop.html" class="footer-link">All Products</a></li>
+                        <li><a href="shop.html?category=skincare" class="footer-link">Skincare</a></li>
+                        <li><a href="shop.html?category=makeup" class="footer-link">Makeup</a></li>
+                        <li><a href="shop.html?category=fragrance" class="footer-link">Fragrance</a></li>
+                        <li><a href="shop.html?category=haircare" class="footer-link">Hair Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h6 class="footer-title">Support</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Shipping Policy</a></li>
+                        <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+                        <li><a href="#" class="footer-link">Order Tracking</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h6 class="footer-title">Contact & Security</h6>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>1001 Luxury Blvd, Suite 500<br>New York, NY 10001, USA</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>concierge@lumierebeauty.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (888) LUMIERE</span>
+                    </div>
+                    
+                    <div class="payment-badges d-flex gap-2 mt-4 flex-wrap">
+                        <span class="pay-badge" title="bKash">bKash</span>
+                        <span class="pay-badge" title="Nagad">Nagad</span>
+                        <span class="pay-badge" title="Cash on Delivery">CashOn</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small text-muted mb-0">&copy; 2026 LUMIÈRE Beauty. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <div class="trust-badges d-inline-flex gap-2">
+                        <div class="trust-badge"><i class="fas fa-shield-alt"></i><span>SSL Secure</span></div>
+                        <div class="trust-badge"><i class="fas fa-leaf"></i><span>100% Vegan</span></div>
+                        <div class="trust-badge"><i class="fas fa-paw"></i><span>Cruelty Free</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wishlist Drawer -->
+    <div class="offcanvas offcanvas-end wishlist-drawer" tabindex="-1" id="wishlistDrawer" aria-labelledby="wishlistDrawerLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="wishlistDrawerLabel">Your Favorites</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="wishlistDrawerBody"></div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="cartDrawerLabel">Your Shopping Bag</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column" id="cartDrawerBody">
+            <!-- Cart items will be rendered here -->
+        </div>
+        <div class="offcanvas-footer p-4 border-top bg-darker" id="cartDrawerFooter">
+            <!-- Totals and Checkout button -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+            loadBestsellers();
+        });
+
+        function loadFeaturedProducts() {
+            const container = document.getElementById('featuredProducts');
+            if (!container) return;
+            const featured = window.products.filter(p => p.badge === 'FEATURED').slice(0, 6);
+            container.innerHTML = featured.map(product => createProductCard(product)).join('');
+        }
+
+        function loadBestsellers() {
+            const container = document.getElementById('bestsellersProducts');
+            if (!container) return;
+            const best = window.products.filter(p => p.badge === 'BESTSELLER').slice(0, 4);
+            container.innerHTML = best.map(product => createProductCard(product, 'col-md-6 col-lg-3')).join('');
+        }
+
+        function createProductCard(product, colClass) { colClass = colClass || "col-md-6 col-lg-4";
+            return `
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card" onclick="openQuickView(${product.id})">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="product-img-fallback" style="display:none; background: linear-gradient(135deg, ${product.color1}, ${product.color2});">
+                            <i class="${product.icon} fa-3x" style="color:rgba(255,255,255,0.5)"></i>
+                        </div>
+                        <span class="product-badge">${product.badge}</span>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Quick View" onclick="event.stopPropagation(); openQuickView(${product.id})"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" title="Add to Wishlist" onclick="event.stopPropagation(); toggleWishlist(${product.id}, this)"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" title="Add to Bag" onclick="event.stopPropagation(); addToCart(${product.id})"><i class="fas fa-shopping-bag"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">${product.categoryLabel}</span>
+                        <h5 class="product-name">${product.name}</h5>
+                        <div class="product-rating">
+                            <span class="stars-sm">${'★'.repeat(Math.floor(product.rating))}${'☆'.repeat(5-Math.floor(product.rating))}</span>
+                            <small>(${product.reviews})</small>
+                        </div>
+                        <div class="product-footer d-flex justify-content-between align-items-center mt-2">
+                            <div>
+                                <span class="product-price">$${product.price.toFixed(2)}</span>
+                                ${product.originalPrice ? `<span class="product-old-price">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                            </div>
+                            <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart(${product.id})">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }
+
+    </script>
+</body>
+</html>
